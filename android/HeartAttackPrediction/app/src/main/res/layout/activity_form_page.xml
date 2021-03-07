@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_bright"
+    tools:context=".FormPage">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--    Image-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/heart"/>
+            <!--    Heading-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Form"
+                android:textColor="@color/purple_500"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginTop="20sp"/>
+            <!--    Name of the user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter your name"
+                android:id="@+id/et_name"
+                android:background="@color/white"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp"/>
+            <!--    Age of the user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter your Age"
+                android:background="@color/white"
+                android:id="@+id/et_age"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <!--    Gender of the user-->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="10sp"
+                android:id="@+id/rg_gender">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+                <RadioButton
+                    android:id="@+id/radio_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:layout_marginLeft="10sp"
+                    android:textSize="20dp" />
+                <RadioButton
+                    android:id="@+id/radio_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:text="Female"
+                    android:textSize="20dp" />
+            </RadioGroup>
+            <!--    Chest pain of the user-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:layout_marginTop="10sp"
+                android:id="@+id/rg_cp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text="Chest Pain"/>
+                <RadioButton android:id="@+id/radio_cp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Typical angina"/>
+                <RadioButton android:id="@+id/radio_cp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Atypical angina"/>
+                <RadioButton android:id="@+id/radio_cp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Non-Angina pain"/>
+                <RadioButton android:id="@+id/radio_cp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Asymptomatic"/>
+            </RadioGroup>
+            <!--    Resting Blood Pressure value-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:hint="Enter Trp value"
+                android:id="@+id/et_trp"
+                android:inputType="number"
+                android:background="@color/white"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <!--    Cholestrol value-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter Cholestrol value"
+                android:id="@+id/et_chol"
+                android:inputType="number"
+                android:background="@color/white"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp"/>
+            <!--    Fasting BLood Sugar value-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:id="@+id/rg_fbs"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="10sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fasting Blood Sugar"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_fbs0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_fbs1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!--    ECG value-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/white"
+                android:id="@+id/rg_ecg"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ECG"
+                    android:textStyle="bold"
+                    android:textSize="30dp"/>
+                <RadioButton android:id="@+id/radio_ecg0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_ecg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ST-T wave abnormality"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_ecg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="left ventricular hypertrophy"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!--    Thalach value of the user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:inputType="number"
+                android:background="@color/white"
+                android:hint="Enter Thalach value"
+                android:id="@+id/et_thalach"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp"/>
+            <!--    Exang value of the user-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:id="@+id/rg_exang"
+                android:layout_marginRight="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exang"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <RadioButton android:id="@+id/radio_exang1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10sp"
+                    android:text="Yes"/>
+                <RadioButton android:id="@+id/radio_exang0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10sp"
+                    android:text="No"/>
+            </RadioGroup>
+            <!--    Old peak value of user-->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:hint="Enter Old Peak value"
+                android:id="@+id/et_oldpeak"
+                android:background="@color/white"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="5sp"
+                android:inputType="numberDecimal"/>
+            <!--    Slope value of user-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:background="@color/white"
+                android:id="@+id/rg_slope"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slope"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <RadioButton android:id="@+id/radio_slope1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upsloping"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_slope2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Float"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_slope3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Downsloping"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!--    Ca value of user-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:id="@+id/rg_ca"
+                android:layout_marginRight="5sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ca"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <RadioButton android:id="@+id/radio_ca0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5sp"/>
+                <RadioButton android:id="@+id/radio_ca1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5sp"/>
+                <RadioButton android:id="@+id/radio_ca2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5sp"/>
+                <RadioButton android:id="@+id/radio_ca3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5sp"/>
+            </RadioGroup>
+            <!-- Thal value of user-->
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:background="@color/white"
+                android:id="@+id/rg_thal"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="5sp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thal"
+                    android:textSize="30dp"
+                    android:textStyle="bold"/>
+                <RadioButton android:id="@+id/radio_thal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_thal6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fixed defect"
+                    android:textSize="20dp"/>
+                <RadioButton android:id="@+id/radio_thal7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reversable defect"
+                    android:textSize="20dp"/>
+            </RadioGroup>
+            <!--    Submit button for response-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:textAllCaps="false"
+                android:text="Submit"
+                android:background="@color/purple_200"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/resButton"
+                android:onClick="MoveResult"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

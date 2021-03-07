@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Heart Attack Prediction</string>
+
+    <string name="nameerror">Please Enter Valid Name</string>
+    <string name="ageerror">*Required field</string>
+    <string name="trperror">*Value must be in range 90-200</string>
+    <string name="cholerror">*Value must be in range 120-600</string>
+    <string name="thalacherror">*Value must be in range 90-220</string>
+    <string name="peakerror">*Value must be in range 1-10</string>
+</resources>

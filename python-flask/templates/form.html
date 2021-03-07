@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block form%}
+<div style="background-image: url(./static/images/bgimage.png); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% auto;">
+    <div class="container">
+        <a href="/"><button class="btn btn-primary btn-lg float-right mt-3">Main</button></a><br>
+    </div>
+    <div class="container col-xs-5 col-md-4 mt-5" style="opacity: 0.8;">
+        <div class="card">
+            <div class="card-header">
+                <h3>Data Taking For Predection</h3>
+            </div>
+            <div class="card-body">
+                <form action="http://127.0.0.1:5000/form" method="POST">
+                    <div class="form-group">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" name="name" placeholder="Enter Your Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age"><b>Age</b></label><br>
+                        <input type="number" name="age" placeholder="Enter Age" class="form-control" min="1" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sex"><b>Gender</b></label> <br>
+                        <input type="radio" required name="sex" value="0" required><label for="male">&nbsp;Male&nbsp;</label>
+                        <input type="radio" required name="sex" value="1" ><label for="female">&nbsp;Female&nbsp;</label>
+                    </div>
+	                   <div class="form-group">
+                        <label for="cp"><b>Chest Pain</b></label> <br>
+                        <input type="radio" required name="cp" value="1" required><label for="1">&nbsp;Typical angina&nbsp;</label>
+                        <input type="radio" required name="cp" value="2"><label for="2">&nbsp;Atypical angina&nbsp;</label><br>
+	                      <input type="radio" required name="cp" value="3"><label for="3">&nbsp;Non-Angina pain&nbsp;</label>
+                        <input type="radio" required name="cp" value="4"><label for="4">&nbsp;Asymptomatic&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="trp"><b>Resting Blood Pressure</b></label><br>
+                        <input type="number" name="trp" placeholder="Enter Trp value" class="form-control" min="90" max="200" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cholesterol"><b>Cholesterol</b></label><br>
+                        <input type="number" name="cholesterol" placeholder="Enter Cholesterol value" class="form-control" min="90" max="200" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fbs"><b>Fasting blood sugar</b></label><br>
+                        <input type="radio" name="fbs" required value="0" required><label for="0">&nbsp;0&nbsp;</label>
+                        <input type="radio" name="fbs" required value="1"><label for="1">&nbsp;1&nbsp;</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="ecg"><b>Ecg</b></label><br>
+                        <input type="radio" name="Ecg" required value="0" required><label for="0">Normal</label><br>
+                        <input type="radio" name="Ecg" required value="1"><label for="1">ST-T wave abnormality</label><br>
+                        <input type="radio" name="Ecg" required value="2"><label for="2">left ventricular hypertrophy</label><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="Thalaz"><b>Thalach(Max Heart rate)</b></label><br>
+                        <input type="number" name="Thalaz" placeholder="Enter Thalach value" class="form-control" min="60" max="220" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Exong"><b>Exang</b></label> &nbsp;
+                        <input type="radio" required name="Exong" value="1" required><label for="yes">&nbsp;Yes&nbsp;</label>
+                        <input type="radio" required name="Exong" value="0"><label for="no">&nbsp;No&nbsp;</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Old Peak"><b>Old Peak</b></label><br>
+                        <input type="number" name="Old Peak" placeholder="Enter Old Peak value" step="0.1" min="0" max="10" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="slope"><b>Slope</b></label> <br>
+                        <input type="radio" required name="slope" value="1" required><label for="1">&nbsp;Upsloping&nbsp;</label>
+                        <input type="radio" required name="slope" value="2"><label for="2">&nbsp;Float&nbsp;</label>
+                        <input type="radio" required name="slope" value="3"><label for="3">&nbsp;Downsloping&nbsp;</label>
+                    </div>
+	                   <div class="form-group">
+                        <label for="ca"><b>Ca</b></label><br>
+                        <input type="radio" required name="ca" value="0" required><label for="0">&nbsp;0&nbsp;</label>
+                        <input type="radio" required name="ca" value="1"><label for="1">&nbsp;1&nbsp;</label>
+                        <input type="radio" required name="ca" value="2"><label for="2">&nbsp;2&nbsp;</label>
+                        <input type="radio" required name="ca" value="3"><label for="3">&nbsp;3&nbsp;</label>
+                    </div>
+	                   <div class="form-group">
+                        <label for="thal"><b>Thal</b></label><br>
+                        <input type="radio" required name="thal" value="3" required><label for="3">&nbsp;Normal&nbsp;</label>
+                        <input type="radio" required name=thal value="6"><label for="6">&nbsp;Fixed defect&nbsp;</label>
+                        <input type="radio" required name="thal" value="7"><label for="7">&nbsp;Reversable defect&nbsp;</label>
+                    </div>
+                    <div class="container">
+                        <button class="btn btn-success btn-lg" type="submit">Submit</button>
+                        <button class="btn btn-warning btn-lg float-right" type="reset">Clear</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+  </div>
+{% endblock%}

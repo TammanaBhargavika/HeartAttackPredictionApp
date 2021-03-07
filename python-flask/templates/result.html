@@ -1,0 +1,89 @@
+{%extends 'base.html'%}
+{% block result %}
+<div style="background-image: url(./static/images/bgimgres.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <div class="container" style="height: 3px;">
+        <a href="/ff"><button class="btn btn-primary btn-lg float-right mt-2">Form</button></a>
+        <a href="/"><button class="btn btn-primary btn-lg float-left mt-2">Main</button></a><br>
+    </div><br><br><br>
+    <div class="container col-md-3" style="opacity: 0.9;">
+        <h1>Hello {{name}}!</h1><br>
+        <div class="card">
+            <div class="card-header">
+                <h2>Your Result Card</h2>
+            </div>
+            <div class="card-body">
+              <table style="width:100%">
+                <tr>
+                  <td>Age: </td>
+                  <td>{{age}}</td>
+                </tr>
+                <tr>
+                  <td>Sex : </td>
+                  <td>{{sex}}</td>
+                </tr>
+                <tr>
+                  <td>Chest Pain : </td>
+                  <td>{{cp}}</td>
+                </tr>
+                <tr>
+                  <td>Resting Blood Pressure : </td>
+                  <td>{{trp}}</td>
+                </tr>
+                <tr>
+                  <td>Cholestrol : </td>
+                  <td>{{cholestrol}}</td>
+                </tr>
+                <tr>
+                  <td>Fasting blood sugar : </td>
+                  <td>{{fbs}}</td>
+                </tr>
+                <tr>
+                  <td>ECG : </td>
+                  <td>{{ecg}}</td>
+                </tr>
+                <tr>
+                  <td>Thalach : </td>
+                  <td>{{Thalaz}}</td>
+                </tr>
+                <tr>
+                  <td>Exang : </td>
+                  <td>{{Exong}}</td>
+                </tr>
+                <tr>
+                  <td>Oldpeak : </td>
+                  <td>{{Oldpeak}}</td>
+                </tr>
+                <tr>
+                  <td>Slope : </td>
+                  <td>{{slope}}</td>
+                </tr>
+                <tr>
+                  <td>Ca: </td>
+                  <td>{{ca}}</td>
+                </tr>
+                <tr>
+                  <td>Thal: </td>
+                  <td>{{thal}}</td>
+                </tr>
+              </table>
+                <p id="danger" style="font-size: 23px; color: red;"></p>
+                <p id="safe" style="font-size: 23px; color: Green;"></p>
+                <!---<h2 class="text-danger">Final Result : {{rrr}}</h2>--->
+              	{% if  rrr ==0 %}
+                  	<script>
+                         document.getElementById("safe").innerHTML = "Your are not diagnosed";
+                   		   //alert("You are not diagnosed")
+                    </script>
+                	{% endif %}
+
+                	{% if  rrr ==1 %}
+                  	<script>
+                        document.getElementById("danger").innerHTML = "Your are diagnosed"
+              		      //alert("You are diagnosed")
+                    </script>
+                	{% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+ {%endblock%}
